@@ -4,16 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginRegisterPOM extends ParentPOM{
+public class LoginRegisterPage extends ParentPOM {
 
-    @FindBy(xpath = "//form/*[text() = 'Name']")
+    @FindBy(name = "name")
     WebElement nameInput;
-    @FindBy(name = "email")
+    @FindBy(xpath = "//div[@class = 'signup-form']//input[@name = 'email']")
     WebElement emailInput;
     @FindBy(xpath = "//form/*[text() = 'Signup']")
     WebElement signUpButton;
 
-    public LoginRegisterPOM(WebDriver driver, String title){super(driver, title);}
+
+
+
+    public LoginRegisterPage(WebDriver driver, String title){super(driver, title);}
 
     public void enterName(String name){
         nameInput.sendKeys(name);
@@ -24,5 +27,6 @@ public class LoginRegisterPOM extends ParentPOM{
     public void clickSignUp(){
         signUpButton.click();
     }
+
 
 }

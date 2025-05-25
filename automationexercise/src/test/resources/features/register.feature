@@ -12,7 +12,8 @@ Feature: Register Steps
     And inputs their Last Name
     And inputs their full address
     And inputs their Mobile Number
-    Then the user should be on the account created page.
+    And the user clicks on the Create Account Button
+    Then the user should be on the account created page
     When the user clicks on the Continue button on the created account page
     Then the user should be the home page with a Delete Account button visible
     When the user clicks on Delete Account

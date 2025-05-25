@@ -12,4 +12,7 @@ public class ParentPOM {
         this.title = title;
         PageFactory.initElements(driver, this);
     }
+    public String getTitle(){
+        return title;
+    }
 }
