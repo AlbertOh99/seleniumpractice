@@ -27,7 +27,7 @@ public class RegisterSteps {
     }
     @When("the user inputs their Email Address")
     public void the_user_inputs_their_email_address() {
-        loginRegisterPage.enterEmail("John@John.com");
+        loginRegisterPage.enterSignupEmail("John@John.com");
     }
     @When("the user clicks on the Signup button")
     public void the_user_clicks_on_the_signup_button() {
